@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">LocationFinder</string>
     <string name="add">Add</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="input_1">Enter Latitude</string>
+    <string name="input_2">Enter Longitude</string>
+    <string name="save_location">Save Location</string>
+    <string name="generate_address">Generate Address</string>
+    <string name="address">Address</string>
+
+
 </resources>

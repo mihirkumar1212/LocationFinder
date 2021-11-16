@@ -6,4 +6,91 @@
     android:layout_height="match_parent"
     tools:context=".Add_Location">
 
+
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/longitude"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/latitude"
+        app:layout_constraintTop_toBottomOf="@+id/latitude" />
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="96dp"
+        android:text="@string/latitude"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_2"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/input_2"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:text="@string/input_2"
+        app:layout_constraintBottom_toBottomOf="@+id/longitude"
+        app:layout_constraintEnd_toEndOf="@+id/input_1" />
+
+    <EditText
+        android:id="@+id/input_1"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="28dp"
+        android:ems="10"
+        android:hint="@string/input_2"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:text="@string/input_1"
+        app:layout_constraintBottom_toBottomOf="@+id/latitude"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/Save"
+        android:layout_width="203dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="128dp"
+        android:text="@string/save_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/GenrateAddress"
+        android:layout_width="217dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/generate_address"
+        app:layout_constraintEnd_toEndOf="@+id/Save"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/Save"
+        app:layout_constraintTop_toBottomOf="@+id/input_2" />
+
+    <EditText
+        android:id="@+id/Address_new"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:text="@string/address"
+        app:layout_constraintEnd_toEndOf="@+id/GenrateAddress"
+        app:layout_constraintStart_toStartOf="@+id/Save"
+        app:layout_constraintTop_toBottomOf="@+id/GenrateAddress" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
