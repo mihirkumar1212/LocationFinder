@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     tools:context=".Add_Location">
 
 
@@ -107,10 +108,9 @@
         android:layout_width="151dp"
         android:layout_height="47dp"
         android:layout_marginStart="44dp"
-        app:layout_constraintBottom_toBottomOf="@+id/Random_button"
         android:hint="RandomNumber"
+        app:layout_constraintBottom_toBottomOf="@+id/Random_button"
         app:layout_constraintStart_toEndOf="@+id/Random_button" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

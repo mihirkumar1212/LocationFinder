@@ -2,6 +2,8 @@ package com.example.locationfinder;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
@@ -36,21 +38,7 @@ public class Add_Location extends AppCompatActivity {
         generateAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                // Gets the address form the user
-                Geocoder geo = new Geocoder(Add_Location.this, Locale.getDefault());
-
-                longitude = Double.parseDouble(input2.getText().toString());
-                latitude = Double.parseDouble(input1.getText().toString());
-                try {
-                    List<Address> listAddress = geo.getFromLocation(latitude,longitude,1);
-                    if (listAddress.size() > 0){
-                        address_new.setText(listAddress.get(0).getAddressLine(0));
-                        // Toast.makeText(Add_Location.this, listAddress.get(0).getCountryName(),Toast.LENGTH_SHORT).show();
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                getAddress();
             }
         });
 
@@ -58,12 +46,13 @@ public class Add_Location extends AppCompatActivity {
         save_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String address = address_new.getText().toString();
                 // calling a function to store the data in the database.
                 database = new MyDatabase(Add_Location.this);
                 database.addLocation(address,String.valueOf(latitude),String.valueOf(longitude));
 
+                Intent intent = new Intent(Add_Location.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -75,11 +64,27 @@ public class Add_Location extends AppCompatActivity {
                 double result2 = Double.parseDouble(randomNumber(-180.0, 80.0));
                 input1.setText(String.valueOf(result));
                 input2.setText(String.valueOf(result2));
-                //randomnumber.setText(String.format("%.2f",result));
             }
         });
     }
 
+
+    public  void getAddress(){
+        Geocoder geo = new Geocoder(Add_Location.this, Locale.getDefault());
+
+        longitude = Double.parseDouble(input2.getText().toString());
+        latitude = Double.parseDouble(input1.getText().toString());
+        try {
+            List<Address> listAddress = geo.getFromLocation(latitude,longitude,1);
+            if (listAddress.size() > 0){
+                address_new.setText(listAddress.get(0).getAddressLine(0));
+                //Toast.makeText(Add_Location.this, listAddress.get(0).getCountryName(),Toast.LENGTH_SHORT).show();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
     public String randomNumber (Double min, Double max){
         double num;
         num = (Math.random() * (max - min)) + min;

@@ -8,6 +8,10 @@
     <string name="save_location">Save Location</string>
     <string name="generate_address">Generate Address</string>
     <string name="address">Address</string>
+    <string name="address_display">Address</string>
+    <string name="latitude_display">Latitude</string>
+    <string name="longitude_disaply">Longitude</string>
+    <string name="search_address">Search Address</string>
 
 
 </resources>
