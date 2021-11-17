@@ -78,4 +78,31 @@ public class MyDatabase  extends SQLiteOpenHelper {
         return cursor;
     }
 
+
+    void updateDatabase(String id, String address, String latitude, String longitude){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Column_ADDRESS , address);
+        contentValues.put(Column_Latitude , latitude);
+        contentValues.put(Column_Longitude , longitude);
+        long result = db.update (Table_Name, contentValues , Column_ID +"=?", new String[] {id} );
+
+        if(result == -1){
+            Toast.makeText(context, "Failed to update", Toast.LENGTH_SHORT).show();
+        }else {
+            System.out.println(" the result is :"+ result);
+            Toast.makeText(context, "Updated Successfully", Toast.LENGTH_SHORT).show();
+        }
+    }
+    void DeleteRow(String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.delete (Table_Name, Column_ID +"=?", new String[] {id} );
+        if(result == -1){
+            Toast.makeText(context, "Failed to Delete", Toast.LENGTH_SHORT).show();
+        }else {
+            System.out.println(" the result is :"+ result);
+            Toast.makeText(context, "Deleted Successfully", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }

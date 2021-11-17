@@ -38,8 +38,7 @@
         android:ems="10"
         android:hint="@string/input_2"
         android:importantForAutofill="no"
-        android:inputType="numberDecimal"
-
+        android:inputType="numberDecimal|numberSigned"
         app:layout_constraintBottom_toBottomOf="@+id/longitude"
         app:layout_constraintEnd_toEndOf="@+id/input_1" />
 
@@ -51,8 +50,7 @@
         android:ems="10"
         android:hint="@string/input_2"
         android:importantForAutofill="no"
-        android:inputType="numberDecimal"
-
+        android:inputType="numberDecimal|numberSigned"
         app:layout_constraintBottom_toBottomOf="@+id/latitude"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="DuplicateSpeakableTextCheck" />

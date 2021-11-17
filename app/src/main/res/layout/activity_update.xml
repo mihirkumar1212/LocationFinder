@@ -4,6 +4,120 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     tools:context=".UpdateActivity">
+
+
+    <TextView
+        android:id="@+id/longitude1"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="36dp"
+        android:text="@string/longitude"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/latitude1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/latitude1"
+        android:layout_width="103dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="168dp"
+        android:text="@string/latitude"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/Address_new1"
+        app:layout_constraintEnd_toEndOf="@+id/longitude1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/longitude1" />
+
+    <EditText
+        android:id="@+id/input_21"
+        android:layout_width="169dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/input_2"
+        android:importantForAutofill="no"
+        android:textStyle="bold"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toBottomOf="@+id/latitude1"
+        app:layout_constraintEnd_toEndOf="@+id/input_11"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_11"
+        app:layout_constraintTop_toBottomOf="@+id/input_11"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/input_11"
+        android:layout_width="167dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="52dp"
+        android:textStyle="bold"
+        android:ems="10"
+        android:hint="@string/input_2"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toBottomOf="@+id/longitude1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="156dp"
+        android:layout_height="70dp"
+        android:text="@string/update"
+        app:layout_constraintBottom_toBottomOf="@+id/delete"
+        app:layout_constraintEnd_toStartOf="@+id/delete"
+        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/GenrateAddress1"
+        android:layout_width="315dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/generate_address"
+        app:layout_constraintBottom_toTopOf="@+id/Address_new1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_21"
+        app:layout_constraintVertical_bias="0.6"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/Address_new1"
+        android:layout_width="329dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="76dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:text="@string/address"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/delete"
+        app:layout_constraintEnd_toEndOf="@+id/GenrateAddress1"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="@+id/GenrateAddress1"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="163dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="236dp"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

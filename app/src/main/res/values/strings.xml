@@ -12,6 +12,8 @@
     <string name="latitude_display">Latitude</string>
     <string name="longitude_disaply">Longitude</string>
     <string name="search_address">Search Address</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
 
 
 </resources>

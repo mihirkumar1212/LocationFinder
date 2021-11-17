@@ -52,7 +52,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onClick(View v) {
                 pos = holder.getAdapterPosition();
-                Intent intent = new Intent(context,MainActivity.class);
+                Intent intent = new Intent(context,UpdateActivity.class);
                 intent.putExtra("id", String.valueOf(location_id.get(pos)));
                 intent.putExtra("address", String.valueOf(address.get(pos)));
                 intent.putExtra("latitude", String.valueOf(latitude.get(pos)));
