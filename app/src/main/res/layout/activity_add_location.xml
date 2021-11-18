@@ -89,7 +89,7 @@
         app:layout_constraintStart_toStartOf="@+id/Save"
         app:layout_constraintTop_toBottomOf="@+id/GenrateAddress" />
 
-    <Button
+  <!--  <Button
         android:id="@+id/Random_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -99,16 +99,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Save"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/random_number"
-        android:layout_width="151dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="44dp"
-        android:hint="RandomNumber"
-        app:layout_constraintBottom_toBottomOf="@+id/Random_button"
-        app:layout_constraintStart_toEndOf="@+id/Random_button" />
+        app:layout_constraintVertical_bias="0.0" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
